@@ -3,106 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiaSpa - Belleza y Bienestar</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #ffcccc; padding: 20px; text-align: center; font-size: 24px; }
-        nav { background: #ff9999; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
-        section { padding: 20px; text-align: center; }
-        .form-container { max-width: 400px; margin: auto; padding: 20px; background: #fff3f3; border-radius: 10px; }
-        input, select { width: 100%; padding: 10px; margin: 10px 0; }
-        button { background: #ff6666; color: white; padding: 10px; border: none; cursor: pointer; }
-    </style>
+    <meta name="description" content="Contáctanos en GIASPA para descubrir nuestros tratamientos de belleza y relajación.">
+    <meta name="keywords" content="Spa en Ecuador, Tratamientos faciales, Relajación y Belleza">
+    <title>Contacto - GIASPA</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header>Bienvenido a GiaSpa</header>
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#quienes-somos">Quiénes Somos</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#reserva">Reserva tu Cita</a>
-    </nav>
-    
-    <section id="inicio">
-        <h2>Relájate y Rejuvenece en GiaSpa</h2>
-        <p>Descubre los mejores tratamientos faciales y corporales.</p>
-    </section>
-    
-    <section id="quienes-somos">
-        <h2>Quiénes Somos</h2>
-        <p>GiaSpa es un centro de belleza y bienestar que ofrece tratamientos de alta calidad.</p>
-    </section>
-    
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <p>Faciales, corporales, depilación y mucho más.</p>
-    </section>
-    
-    <section id="reserva">
-        <h2>Reserva tu Cita</h2>
-        <div class="form-container">
-            <form id="reservaForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-                
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-                
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="servicio">Servicio Deseado:</label>
-                <select id="servicio" name="servicio">
-                    <option value="facial">Limpieza Facial</option>
-                    <option value="masaje">Masaje Relajante</option>
-                    <option value="depilacion">Depilación Láser</option>
-                </select>
-                
-                <label for="fecha">Fecha de la Cita:</label>
-                <input type="date" id="fecha" name="fecha" required>
-                
-                <label for="hora">Hora de la Cita:</label>
-                <input type="time" id="hora" name="hora" required>
-                
-                <button type="submit">Reservar Ahora</button>
-            </form>
+    <div class="container">
+        <img src="assets/images/logo.png" alt="GIASPA Logo" class="logo">
+        <h1>Contáctanos</h1>
+        <p>Déjanos un mensaje y nos pondremos en contacto contigo.</p>
+        <form action="https://kommo.com/form" method="post">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="tel" name="phone" placeholder="Número de teléfono" required>
+            <textarea name="message" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="social-links">
+            <a href="https://www.facebook.com/giaspaec/" target="_blank" class="btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/giaspa.ec/" target="_blank" class="btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/?text=Hola%20GIASPA" target="_blank" class="btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
-    </section>
-    
-    <script>
-        document.getElementById("reservaForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            const formData = {
-                name: document.getElementById("nombre").value,
-                last_name: document.getElementById("apellido").value,
-                phone: document.getElementById("telefono").value,
-                email: document.getElementById("email").value,
-                service: document.getElementById("servicio").value,
-                date: document.getElementById("fecha").value,
-                time: document.getElementById("hora").value
-            };
-            
-            fetch("https://your-kommo-webhook-url.com", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert("Tu cita ha sido registrada con éxito en Kommo!");
-            })
-            .catch(error => {
-                console.error("Error al enviar la reserva a Kommo:", error);
-                alert("Hubo un error, por favor intenta nuevamente.");
-            });
-        });
-    </script>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
