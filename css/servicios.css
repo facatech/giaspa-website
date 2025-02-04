@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #572B6D;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #D81D76;
+    color: white;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+nav {
+    background-color: #572B6D;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #D81D76;
+    transform: scale(1.1);
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.servicio {
+    background: #F3F3F3;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicio h2 {
+    color: #D81D76;
+}
+
+.servicio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicio ul li {
+    background: #FFFFFF;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-category ul {
+    list-style: none; /* Elimina las viñetas */
+    padding: 0;
+}
+
+.service-category ul li {
+    padding: 10px;
+    font-size: 18px;
+    background: #F3F3F3;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
